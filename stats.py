@@ -6,8 +6,9 @@ def charcount(text):
     lichars = list(lchars)
     coundic = {}
     for ch in lichars:
-        if ch in coundic:
-            coundic[ch] += 1
-        else:
-            coundic.update({ch: 1})
+        if ch.isalpha() == True:
+            if ch in coundic:
+                coundic[ch] += 1
+            else:
+                coundic.update({ch: 1})
     return coundic
