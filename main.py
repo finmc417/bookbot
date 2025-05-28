@@ -7,6 +7,9 @@ def get_book_text(filepath):
 def main():
     filepath = "books/frankenstein.txt"
     wordnum = get_book_text(filepath)
+    print(f"Bookbot analysing book found at {filepath}")
+    print("----------- Word Count ----------")
     print(f"{wordcount(wordnum)} words found in the document")
+    print("--------- Character Count -------")
     print(charcount(wordnum))
 main()
