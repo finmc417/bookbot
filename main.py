@@ -5,11 +5,15 @@ def get_book_text(filepath):
         fileContents = f.read()
         return fileContents
 def main():
+    print("============ BOOKBOT ============")
     filepath = "books/frankenstein.txt"
     wordnum = get_book_text(filepath)
     print(f"Bookbot analysing book found at {filepath}")
     print("----------- Word Count ----------")
-    print(f"{wordcount(wordnum)} words found in the document")
+    print(f"Found {wordcount(wordnum)} total words")
     print("--------- Character Count -------")
-    print(charcount(wordnum))
+    for char in charcount(wordnum):
+        cunt = charcount(wordnum)[char]
+        print(f"{char}: {cunt}")
+    print("============= END ===============")
 main()
