@@ -1,12 +1,16 @@
 from stats import wordcount
 from stats import charcount
+import sys
+if len(sys.argv) <= 1:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 def get_book_text(filepath):
     with open(filepath) as f:
         fileContents = f.read()
         return fileContents
 def main():
     print("============ BOOKBOT ============")
-    filepath = "books/frankenstein.txt"
+    filepath = sys.argv[1]
     wordnum = get_book_text(filepath)
     print(f"Bookbot analysing book found at {filepath}")
     print("----------- Word Count ----------")
