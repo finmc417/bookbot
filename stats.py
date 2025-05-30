@@ -12,5 +12,5 @@ def charcount(text):
             else:
                 coundic.update({ch: 1})
     ccoundic = sorted(coundic.items(), key=lambda item: item[1], reverse = True)
-    return ccoundic
-print(charcount("hello i am hungry let me inside i want to eat dinner"))
+    finalle = dict(ccoundic)
+    return finalle
